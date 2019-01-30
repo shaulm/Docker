@@ -1,11 +1,6 @@
 FROM python:2
-
-ADD Dock.py /
-
-ADD Config.json /
-
-RUN mkdir --parents /home/elad/JsonRes/f
-
-RUN pip install pytest
-
-CMD [ "python", "./Dock.py", "18" ]
+ARG inBuildNum
+ENV build_id=$inBuildNum
+ADD Dock.py $HOME/
+ADD Config.json $HOME/
+CMD python ./Dock.py $build_id
