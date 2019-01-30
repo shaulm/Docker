@@ -1,0 +1,24 @@
+{
+    "install": {
+        "version": "1.0.0.1", 
+        "list": [
+            {
+                "image": "system.img", 
+                "partition": "system"
+            }, 
+            {
+                "image": "boot.img", 
+                "partition": "boot"
+            }, 
+            {
+                "image": "userdata.img", 
+                "partition": "userdata"
+            }, 
+            {
+                "image": "persist.img", 
+                "partition": "persist"
+            }
+        ], 
+        "name": "images"
+    }
+}}
